@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Raj Survey provides professional land survey, plot measurement, boundary marking, site survey, level survey and map layout services in Gandhinagar, Gujarat.">
+  <title>Raj Survey | Land Survey & Measurement Services</title>
+  <style>
+    :root{--green:#003b2e;--deep:#00281f;--gold:#f4b51b;--ink:#102f29;--muted:#60716d;--cream:#f7f8f5;--white:#fff;--line:#e2e9e5;--shadow:0 14px 36px rgba(0,45,34,.10)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,92%);margin:auto}
+    .topbar{background:var(--deep);color:#e9f4ef;font-size:.88rem;padding:8px 0}
+    .topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:245px}
+    .logo{width:58px;height:58px;border:3px solid var(--gold);border-radius:50%;display:grid;place-items:center;background:var(--green);color:white;box-shadow:inset 0 0 0 3px rgba(255,255,255,.16);flex-shrink:0}
+    .logo svg{width:43px;height:43px}
+    .brand-name{font-size:1.55rem;font-weight:900;letter-spacing:.5px;line-height:1.1;color:var(--green)}
+    .brand-name span{color:#d99b09}
+    .brand-tag{font-size:.67rem;font-weight:800;letter-spacing:.8px;color:#52645e}
+    .navlinks{display:flex;align-items:center;gap:25px;font-size:.93rem;font-weight:700}
+    .navlinks a{transition:.2s}
+    .navlinks a:hover{color:#b98100}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:12px 20px;font-weight:800;transition:transform .2s,box-shadow .2s}
+    .nav-cta{background:var(--green);color:white;white-space:nowrap}
+    .btn:hover,.nav-cta:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+    .menu-toggle{display:none;background:none;border:0;font-size:1.7rem;color:var(--green);cursor:pointer}
+    .hero{position:relative;overflow:hidden;background:var(--deep);color:white;isolation:isolate}
+    .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(0,39,29,.98) 0%,rgba(0,48,36,.91) 42%,rgba(0,38,28,.12) 100%),url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85') center/cover}
+    .hero::after{content:"";position:absolute;right:-100px;top:-160px;width:430px;height:430px;border:1px solid rgba(244,181,27,.28);border-radius:50%;box-shadow:0 0 0 45px rgba(244,181,27,.04),0 0 0 90px rgba(244,181,27,.035);z-index:-1}
+    .hero-content{padding:95px 0 88px;max-width:650px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:2px;font-size:.78rem;font-weight:900;color:var(--gold);margin-bottom:17px}
+    .eyebrow:before{content:"";width:28px;height:2px;background:var(--gold)}
+    h1{font-size:clamp(2.8rem,6vw,5rem);line-height:1.03;letter-spacing:-1.5px;margin-bottom:18px}
+    h1 span{color:var(--gold)}
+    .hero p{max-width:570px;color:#e3eee8;font-size:1.1rem;margin-bottom:28px}
+    .hero-points{display:flex;gap:22px;flex-wrap:wrap;margin:27px 0 32px;color:#f4f8f5;font-size:.9rem;font-weight:700}
+    .hero-points span{display:flex;align-items:center;gap:8px}
+    .check{display:inline-grid;place-items:center;width:25px;height:25px;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font-size:.8rem}
+    .btn-gold{background:var(--gold);color:#142e25}
+    .btn-outline{border:1px solid rgba(255,255,255,.65);color:white}
+    .section{padding:78px 0}
+    .section-soft{background:var(--cream)}
+    .section-head{text-align:center;max-width:680px;margin:0 auto 38px}
+    .section-head .eyebrow{margin-bottom:8px}
+    .section-head .eyebrow:before{display:none}
+    h2{font-size:clamp(1.9rem,3.5vw,2.7rem);line-height:1.18;color:var(--green);margin-bottom:12px}
+    .section-head p{color:var(--muted)}
+    .services{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+    .service-card{padding:25px 16px 23px;text-align:center;background:white;border:1px solid var(--line);border-radius:16px;box-shadow:0 5px 15px rgba(0,40,30,.04);transition:.25s}
+    .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#e8c45d}
+    .service-icon{width:58px;height:58px;display:grid;place-items:center;margin:0 auto 15px;background:#eaf4ef;color:var(--green);border-radius:16px;font-size:1.8rem}
+    .service-card h3{font-size:1rem;margin-bottom:7px}
+    .service-card p{font-size:.88rem;color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+    .about-image{position:relative}
+    .about-image img{height:440px;width:100%;object-fit:cover;border-radius:22px;box-shadow:var(--shadow)}
+    .image-label{position:absolute;bottom:18px;left:18px;background:var(--green);color:white;border-left:4px solid var(--gold);padding:12px 18px;border-radius:8px;font-weight:800}
+    .about-copy .eyebrow{margin-bottom:10px}
+    .about-copy p{color:var(--muted);margin:0 0 18px}
+    .feature-list{list-style:none;display:grid;gap:12px;margin:24px 0}
+    .feature-list li{display:flex;gap:11px;align-items:flex-start;font-weight:700}
+    .feature-list b{color:#b78100;font-size:1.1rem}
+    .trust-strip{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
+    .trust-strip span{background:#f0f5f1;padding:8px 12px;border-radius:8px;font-size:.82rem;font-weight:800}
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .gallery-card{background:white;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 6px 18px rgba(0,40,30,.06)}
+    .gallery-card img{width:100%;height:190px;object-fit:cover;transition:transform .35s}
+    .gallery-card:hover img{transform:scale(1.05)}
+    .gallery-card h3{font-size:.96rem;padding:15px 15px 3px}
+    .gallery-card p{font-size:.84rem;color:var(--muted);padding:0 15px 16px}
+    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .process-card{border:1px solid var(--line);border-radius:15px;padding:25px;background:white}
+    .step{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:var(--gold);color:var(--deep);font-weight:900;margin-bottom:15px}
+    .process-card p{color:var(--muted);margin-top:7px;font-size:.94rem}
+    .contact-band{background:linear-gradient(120deg,var(--green),#00503b);color:white;padding:45px 0}
+    .contact-inner{display:flex;justify-content:space-between;align-items:center;gap:25px}
+    .contact-inner h2{color:white;margin-bottom:8px}
+    .contact-inner p{color:#dcebe4}
+    .contact-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-light{background:white;color:var(--green)}
+    .btn-whatsapp{background:#159b58;color:white}
+    footer{background:#00271e;color:#d5e3dc;padding:32px 0 20px}
+    .footer-top{display:flex;justify-content:space-between;gap:25px;align-items:center;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.13)}
+    .footer-top .brand-name{color:white}
+    .footer-top .brand-tag{color:#b9cbc2}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem}
+    .footer-links a:hover{color:var(--gold)}
+    .copyright{text-align:center;font-size:.82rem;color:#a8bdb3;padding-top:18px}
+    .mobile-bar{display:none}
+    @media(max-width:950px){.navlinks{gap:14px}.nav-cta{padding:10px 14px}.services{grid-template-columns:repeat(3,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.about-grid{gap:30px}}
+    @media(max-width:720px){
+      .topbar .container{justify-content:center;text-align:center}.nav{min-height:72px}.brand{min-width:0}.logo{width:48px;height:48px}.logo svg{width:36px;height:36px}.brand-name{font-size:1.25rem}.brand-tag{font-size:.56rem}
+      .menu-toggle{display:block}.nav-cta{display:none}.navlinks{display:none;position:absolute;top:72px;left:0;right:0;background:white;padding:18px 5%;box-shadow:0 12px 18px rgba(0,0,0,.09);flex-direction:column;align-items:stretch;gap:0}
+      .navlinks.open{display:flex}.navlinks a{padding:12px 0;border-bottom:1px solid var(--line)}
+      .hero::before{background:linear-gradient(90deg,rgba(0,39,29,.96),rgba(0,48,36,.78)),url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80') center/cover}
+      .hero-content{padding:75px 0 70px}.hero p{font-size:1rem}.hero-points{gap:12px}.section{padding:58px 0}.services{grid-template-columns:repeat(2,1fr);gap:12px}.service-card{padding:20px 10px}.about-grid{grid-template-columns:1fr}.about-image img{height:310px}.gallery{gap:12px}.gallery-card img{height:150px}.process-grid{grid-template-columns:1fr}.contact-inner{align-items:flex-start;flex-direction:column}.footer-top{align-items:flex-start;flex-direction:column}.mobile-bar{position:fixed;z-index:30;bottom:0;left:0;right:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px;background:rgba(255,255,255,.97);box-shadow:0 -5px 22px rgba(0,0,0,.12)}.mobile-bar a{padding:12px;border-radius:9px;text-align:center;font-weight:900;font-size:.9rem}.mobile-call{background:var(--green);color:white}.mobile-wa{background:#159b58;color:white}footer{padding-bottom:90px}
+    }
+    @media(max-width:390px){.brand-name{font-size:1.08rem}.brand-tag{letter-spacing:.2px}.services{grid-template-columns:1fr 1fr}.hero h1{font-size:2.6rem}.gallery-card img{height:125px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>📍 Serving Gandhinagar, Gujarat</span><span>Accurate · Reliable · Professional</span></div></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Raj Survey home">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 38L35 20L49 31L64 13L85 38" stroke="#F4B51B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M30 78V39H51C63 39 69 45 69 55C69 64 63 69 52 69H43L66 82" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M47 39V81" stroke="#F4B51B" stroke-width="3"/>
+          </svg>
+        </div>
+        <div><div class="brand-name">RAJ <span>SURVEY</span></div><div class="brand-tag">LAND SURVEY & MEASUREMENT SERVICES</div></div>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
+      <nav class="navlinks" id="navlinks">
+        <a href="#home" onclick="closeMenu()">Home</a><a href="#services" onclick="closeMenu()">Services</a><a href="#gallery" onclick="closeMenu()">Gallery</a><a href="#about" onclick="closeMenu()">About Us</a><a href="#contact" onclick="closeMenu()">Contact</a>
+      </nav>
+      <a class="nav-cta" href="https://wa.me/917043937916?text=Hello%20Raj%20Survey%2C%20I%20need%20land%20survey%20service." target="_blank" rel="noopener">☏ &nbsp; Call / WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container"><div class="hero-content">
+        <div class="eyebrow">Land Survey Experts · Gandhinagar</div>
+        <h1>RAJ <span>SURVEY</span></h1>
+        <h2 style="color:white;font-size:clamp(1.2rem,2.6vw,1.65rem);margin:0 0 15px">Land Survey & Measurement Services</h2>
+        <p>आपकी ज़मीन, हमारी ज़िम्मेदारी। Accurate land measurement and dependable survey solutions for plots, farms and construction sites.</p>
+        <div class="hero-points"><span><i class="check">✓</i> Accurate Measurement</span><span><i class="check">✓</i> Professional Service</span><span><i class="check">✓</i> On-Time Delivery</span></div>
+        <a class="btn btn-gold" href="#contact">हमसे संपर्क करें &nbsp; →</a>
+        <a class="btn btn-outline" href="#services">Our Services</a>
+      </div></div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">What We Do</div><h2>Our Survey Services</h2><p>Practical and professional measurement support for your land and project requirements.</p></div>
+        <div class="services">
+          <article class="service-card"><div class="service-icon">⌗</div><h3>Plot Measurement</h3><p>Plot and land measurement with careful field checks.</p></article>
+          <article class="service-card"><div class="service-icon">📍</div><h3>Boundary Marking</h3><p>Identify and mark land boundaries on site.</p></article>
+          <article class="service-card"><div class="service-icon">⌂</div><h3>Site Survey</h3><p>Survey support for construction and development sites.</p></article>
+          <article class="service-card"><div class="service-icon">⌖</div><h3>Level Survey</h3><p>Level and elevation measurements for your project.</p></article>
+          <article class="service-card"><div class="service-icon">🗺</div><h3>Map & Layout</h3><p>Layout and mapping support based on site needs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1000&q=85" alt="Professional technical field work" loading="lazy">
+          <div class="image-label">Precision in Every Measurement</div>
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">About Us</div><h2>Meet Raj Survey</h2>
+          <p>Raj Survey provides land survey and measurement services for customers in Gandhinagar and nearby areas. We focus on clear communication, careful measurements and professional service from the first call to the site visit.</p>
+          <p>Whether you need a plot measured, a boundary marked or a construction site checked, contact us to discuss your requirements and arrange a visit.</p>
+          <ul class="feature-list"><li><b>✓</b><span>Owner: Rajdeepsinh</span></li><li><b>✓</b><span>Service Area: Gandhinagar, Gujarat</span></li><li><b>✓</b><span>Trusted · Experienced · Professional</span></li></ul>
+          <div class="trust-strip"><span>✓ Clear Communication</span><span>✓ Site-Focused Service</span><span>✓ Customer First</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Our Work</div><h2>Survey Work Gallery</h2><p>A look at the types of land and site survey projects we can help with.</p></div>
+        <div class="gallery">
+          <article class="gallery-card"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=700&q=80" alt="Open agricultural land" loading="lazy"><h3>Agricultural Land Survey</h3><p>ખેતીની જમીનનું સર્વે</p></article>
+          <article class="gallery-card"><img src="https://images.unsplash.com/photo-1503387762-592dead58ef4?auto=format&fit=crop&w=700&q=80" alt="Building construction site" loading="lazy"><h3>Construction Site Survey</h3><p>કન્સ્ટ્રક્શન સાઇટ સર્વે</p></article>
+          <article class="gallery-card"><img src="https://images.unsplash.com/photo-1506645292803-579c17d4ba0a?auto=format&fit=crop&w=700&q=80" alt="Plans and technical drawings" loading="lazy"><h3>Plot Boundary & Layout</h3><p>પ્લોટ સીમાકંન અને લેઆઉટ</p></article>
+          <article class="gallery-card"><img src="https://images.unsplash.com/photo-1518005020951-eccf1f4ba2df?auto=format&fit=crop&w=700&q=80" alt="Modern buildings and site planning" loading="lazy"><h3>Topographical Survey</h3><p>ટોપોગ્રાફિકલ સર્વે</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Simple Process</div><h2>How It Works</h2><p>Getting started with Raj Survey is straightforward.</p></div>
+        <div class="process-grid">
+          <article class="process-card"><div class="step">01</div><h3>Contact Us</h3><p>Call or WhatsApp and share your location and survey requirement.</p></article>
+          <article class="process-card"><div class="step">02</div><h3>Discuss & Schedule</h3><p>We’ll discuss the work and coordinate a suitable site visit.</p></article>
+          <article class="process-card"><div class="step">03</div><h3>Site Survey</h3><p>We carry out the agreed measurement work and explain the next steps.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-band" id="contact">
+      <div class="container contact-inner">
+        <div><div class="eyebrow">Let’s Talk</div><h2>Need a Land Survey?</h2><p>Contact Rajdeepsinh to discuss your survey requirement in Gandhinagar.</p></div>
+        <div class="contact-actions"><a class="btn btn-light" href="tel:+917043937916">☎ &nbsp; +91 70439 37916</a><a class="btn btn-whatsapp" href="https://wa.me/917043937916?text=Hello%20Raj%20Survey%2C%20I%20need%20land%20survey%20service." target="_blank" rel="noopener">WhatsApp Us ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <a class="brand" href="#home">
+          <div class="logo" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 38L35 20L49 31L64 13L85 38" stroke="#F4B51B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 78V39H51C63 39 69 45 69 55C69 64 63 69 52 69H43L66 82" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M47 39V81" stroke="#F4B51B" stroke-width="3"/></svg></div>
+          <div><div class="brand-name">RAJ <span>SURVEY</span></div><div class="brand-tag">LAND SURVEY & MEASUREMENT SERVICES</div></div>
+        </a>
+        <div class="footer-links"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+        <div>📍 Gandhinagar, Gujarat<br>☎ <a href="tel:+917043937916">+91 70439 37916</a></div>
+      </div>
+      <div class="copyright">© <span id="year">2026</span> Raj Survey · Owner: Rajdeepsinh · All rights reserved.</div>
+    </div>
+  </footer>
+  <div class="mobile-bar"><a class="mobile-call" href="tel:+917043937916">☎ Call Now</a><a class="mobile-wa" href="https://wa.me/917043937916?text=Hello%20Raj%20Survey%2C%20I%20need%20land%20survey%20service." target="_blank" rel="noopener">WhatsApp</a></div>
+  <script>
+    function toggleMenu(){const nav=document.getElementById('navlinks');const btn=document.querySelector('.menu-toggle');nav.classList.toggle('open');btn.setAttribute('aria-expanded',nav.classList.contains('open'))}
+    function closeMenu(){const nav=document.getElementById('navlinks');const btn=document.querySelector('.menu-toggle');nav.classList.remove('open');btn.setAttribute('aria-expanded','false')}
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
